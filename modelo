@@ -1,56 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mxfile host="app.diagrams.net" modified="2025-11-12T00:00:00.000Z" agent="5.0 (Windows)" version="20.6.3" editor="draw.io">
-  <diagram id="teleconsultas" name="Diagrama de Casos de Uso">
+  <diagram id="teleconsultasIA" name="Sistema de Teleconsultas com IA">
     <mxGraphModel dx="1420" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        
+
         <!-- Atores -->
         <mxCell id="2" value="Paciente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="180" width="40" height="80" as="geometry"/>
+          <mxGeometry x="60" y="180" width="40" height="80" as="geometry"/>
         </mxCell>
         <mxCell id="3" value="Médico" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="380" width="40" height="80" as="geometry"/>
+          <mxGeometry x="60" y="380" width="40" height="80" as="geometry"/>
         </mxCell>
         <mxCell id="4" value="Administrador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="580" width="40" height="80" as="geometry"/>
+          <mxGeometry x="60" y="580" width="40" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="IA Médica" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#e6f7ff;html=1;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="300" width="60" height="80" as="geometry"/>
         </mxCell>
 
-        <!-- Casos de uso -->
-        <mxCell id="10" value="Agendar Teleconsulta" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="320" y="180" width="180" height="60" as="geometry"/>
+        <!-- Casos de uso principais -->
+        <mxCell id="10" value="Agendar Teleconsulta" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="320" y="160" width="180" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="11" value="Validar Disponibilidade" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="580" y="180" width="180" height="60" as="geometry"/>
+        <mxCell id="11" value="Validar Disponibilidade" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="560" y="160" width="180" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="12" value="Realizar Teleconsulta" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="320" y="300" width="180" height="60" as="geometry"/>
+        <mxCell id="12" value="Realizar Teleconsulta" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="320" y="280" width="180" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="13" value="Gerar/Assinar Prontuário" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="580" y="300" width="180" height="60" as="geometry"/>
+        <mxCell id="13" value="Gerar/Assinar Prontuário" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="560" y="280" width="180" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="14" value="Configurar Regras de Agendamento" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="14" value="Configurar Regras de Agendamento" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;" vertex="1" parent="1">
           <mxGeometry x="320" y="580" width="220" height="60" as="geometry"/>
         </mxCell>
+        <mxCell id="15" value="Validar Credenciais de Médicos" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="320" y="480" width="220" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="16" value="Notificar Usuários" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="580" y="400" width="180" height="60" as="geometry"/>
+        </mxCell>
 
-        <!-- Conectores -->
-        <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;" edge="1" parent="1" source="2" target="10">
+        <!-- Casos de uso com IA -->
+        <mxCell id="17" value="Analisar Sintomas do Paciente" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#c6efce;" vertex="1" parent="1">
+          <mxGeometry x="800" y="140" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="18" value="Sugerir Médico Especialista" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#c6efce;" vertex="1" parent="1">
+          <mxGeometry x="800" y="220" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="19" value="Gerar Relatório Automático" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#c6efce;" vertex="1" parent="1">
+          <mxGeometry x="800" y="300" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="20" value="Monitorar Indicadores de Saúde" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#c6efce;" vertex="1" parent="1">
+          <mxGeometry x="800" y="380" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Conexões -->
+        <mxCell id="30" style="endArrow=classic;html=1;" edge="1" parent="1" source="2" target="10"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="31" style="endArrow=classic;html=1;" edge="1" parent="1" source="3" target="12"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="32" style="endArrow=classic;html=1;" edge="1" parent="1" source="3" target="13"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="33" style="endArrow=classic;html=1;" edge="1" parent="1" source="4" target="14"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="34" style="endArrow=classic;html=1;" edge="1" parent="1" source="4" target="15"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="35" style="endArrow=classic;html=1;" edge="1" parent="1" source="5" target="17"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="36" style="endArrow=classic;html=1;" edge="1" parent="1" source="5" target="18"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="37" style="endArrow=classic;html=1;" edge="1" parent="1" source="5" target="19"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="38" style="endArrow=classic;html=1;" edge="1" parent="1" source="5" target="20"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- Relações include e extend -->
+        <mxCell id="40" value="&lt;&lt;include&gt;&gt;" style="edgeStyle=elbowEdgeStyle;endArrow=open;html=1;dashed=1;" edge="1" parent="1" source="10" target="11">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;" edge="1" parent="1" source="3" target="12">
+        <mxCell id="41" value="&lt;&lt;extend&gt;&gt;" style="edgeStyle=elbowEdgeStyle;endArrow=open;html=1;dashed=1;" edge="1" parent="1" source="12" target="13">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;" edge="1" parent="1" source="3" target="13">
+        <mxCell id="42" value="&lt;&lt;extend&gt;&gt;" style="edgeStyle=elbowEdgeStyle;endArrow=open;html=1;dashed=1;" edge="1" parent="1" source="10" target="17">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;" edge="1" parent="1" source="4" target="14">
+        <mxCell id="43" value="&lt;&lt;extend&gt;&gt;" style="edgeStyle=elbowEdgeStyle;endArrow=open;html=1;dashed=1;" edge="1" parent="1" source="11" target="18">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="24" value="&lt;&lt;include&gt;&gt;" style="edgeStyle=elbowEdgeStyle;endArrow=open;html=1;dashed=1;" edge="1" parent="1" source="10" target="11">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="25" value="&lt;&lt;extend&gt;&gt;" style="edgeStyle=elbowEdgeStyle;endArrow=open;html=1;dashed=1;" edge="1" parent="1" source="12" target="13">
+        <mxCell id="44" value="&lt;&lt;extend&gt;&gt;" style="edgeStyle=elbowEdgeStyle;endArrow=open;html=1;dashed=1;" edge="1" parent="1" source="13" target="19">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
